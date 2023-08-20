@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: black;
+  color: white;
+}
+nav {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 10;
+}
+.nav-menu {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  height: calc(100vh - 90px);
+  width: 100vw;
+  z-index: 10;
+  transition: 0.3s all;
+  background-color: black !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+header {
+  width: 100%;
+  height: 130vh;
+  background-size: 100vw 130vh;
+  background-attachment: fixed;
+  position: relative;
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.play-video-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Audio player */
+/* input[type="range"] {
+  --range-progress: 0;
+}
+
+input[type="range"]::before {
+  background: #f50;
+  width: var(--range-progress);
+} */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="range"] {
+    overflow: hidden;
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: #111111;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    -webkit-appearance: none;
+    color: purple;
+    margin-top: -1px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 5px;
+    -webkit-appearance: none;
+    height: 5px;
+    background: white;
+    box-shadow: -300px 0 0 300px purple;
+  }
+}
+
+#timer {
+  position: relative;
+  z-index: 1;
+}
+
+#contact input {
+  color: gray;
+}
+#contact textarea {
+  color: gray;
+}
+
+footer {
+  position: relative;
+  z-index: 3;
+  background-image: url("/images/footer-bg.png");
+  background-size: cover;
+  min-height: 500px;
+  height: max-content;
+}
